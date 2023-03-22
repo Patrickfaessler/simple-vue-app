@@ -10,6 +10,7 @@ import BarcodeScan from './BarcodeScan.vue'
 </script>
 
 <template>
+  <BarcodeScan @decode="onDecode" @loaded="onLoaded"></BarcodeScan>
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />

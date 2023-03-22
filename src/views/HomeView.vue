@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import BarcodeScan from '../components/BarcodeScan.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+     <BarcodeScan @decode="onDecode" @loaded="onLoaded"></BarcodeScan>
   </main>
 </template>

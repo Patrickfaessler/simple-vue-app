@@ -4,15 +4,17 @@ import HomeView from './views/HomeView.vue';
 
 <template>
   <main>
-    <h1>Produktescanner</h1>
+    <h1>BarcodeApp</h1>
     <HomeView />
   </main>
 </template>
 
 <style scoped>
+  h1{
+    text-align: center;
+  }
   main{
     position: center;
     width: 100%;
-    background-color: aqua;
   }
 </style>

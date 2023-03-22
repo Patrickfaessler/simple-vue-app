@@ -15,7 +15,6 @@ const onDecode = (text) => {
 
 <template>
   <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
-  <h2>The decoded value in QR/barcode is</h2>
   <h2>{{ decodedText }}</h2>
 </template>
 

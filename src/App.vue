@@ -1,11 +1,18 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
-  <RouterView />
+  <main>
+    <h1>Produktescanner</h1>
+    <HomeView />
+  </main>
 </template>
 
 <style scoped>
+  main{
+    position: center;
+    width: 100%;
+    background-color: aqua;
+  }
 </style>

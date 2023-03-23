@@ -1,10 +1,18 @@
-<script setup>
-import BarcodeScan from '../components/BarcodeScan.vue'
-</script>
-
 <template>
-     <BarcodeScan @decode="onDecode" @loaded="onLoaded"></BarcodeScan>
+     <h1>-- BarcodeApp --</h1>
+     <BarcodeScan></BarcodeScan>
 </template>
 
-<style scoped>
+<script>
+import BarcodeScan from '../components/BarcodeScan.vue';
+
+export default {
+     name: 'BarcodeApp',
+     components: {
+          BarcodeScan,
+     },
+};
+</script>
+
+<style>
 </style>

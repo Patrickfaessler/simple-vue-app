@@ -1,20 +1,25 @@
-<script setup>
-import HomeView from './views/HomeView.vue';
-</script>
-
 <template>
   <main>
-    <h1>BarcodeApp</h1>
     <HomeView />
   </main>
 </template>
 
-<style scoped>
-  h1{
-    text-align: center;
+<script>
+import HomeView from './views/HomeView.vue';
+
+export default {
+  components: {
+    HomeView
   }
-  main{
-    position: center;
-    width: 100%;
-  }
+}
+</script>
+
+<style>
+main {
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-weight: bolder;
+}
 </style>

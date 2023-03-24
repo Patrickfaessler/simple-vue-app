@@ -11,6 +11,12 @@ const mockProducts = [
         price: "0.99€",
         image: "https://www.aldi-nord.de/content/dam/aldi/germany/produkte/alkoholfreie-getraenke/0482_42-2021_MineralwasserMedium-BrandenburgerEinzel_ON.png",
     },
+    {
+        description: "Cola-Mix",
+        ean: "4009228121654",
+        price: "1.99€",
+        image: "https://www.getraenkedienst.com/media/image/16/5e/15/Krumbach_Cola-Mix_Limonade_20_x_0_5l_600x600@2x.jpg",
+    },
   ];
 
   export default mockProducts;

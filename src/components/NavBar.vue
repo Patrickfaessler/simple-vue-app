@@ -1,5 +1,6 @@
 <template>
-    <Slide>
+    <Slide class="burger-menu" width="200">
+        <h1>MENU</h1>
         <router-link to="/">Scanner</router-link>
         <router-link to="/scannerhistory">Scanner History</router-link>
     </Slide>
@@ -15,4 +16,23 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+h1 {
+    text-align: center;
+    justify-content: center;
+}
+
+    .burger-menu a{
+        text-decoration: none;
+        color: aliceblue;
+        text-align: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    a:hover {
+        transform: scale(1.2)
+    }
+
+
+</style>

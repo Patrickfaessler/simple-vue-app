@@ -3,7 +3,21 @@
 </template>
 
 <script>
+import { getArticle } from '../data/Articledata';
 
+export default {
+    data() {
+        return {
+            article: [],
+        }
+    },
+
+    methods: {
+        async getArticle() {
+            this.article = await getArticle();
+        }
+    }
+}
 </script>
 
 <style>

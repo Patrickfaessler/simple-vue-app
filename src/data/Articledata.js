@@ -1,5 +1,5 @@
 function getArticle() {
-    return fetch('http://localhost:3333/article')
+    return fetch('https://nodejs-for-web-prog.azurewebsites.net/article')
     .then(response => response.json())
     .then(data => {
         return data;
@@ -10,7 +10,7 @@ function getArticle() {
 }
 
 function addArticle(newArticle) {
-    return fetch('http://localhost:3333/article', {
+    return fetch('https://nodejs-for-web-prog.azurewebsites.net/article', {
         method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ function addArticle(newArticle) {
 }
 
 function deleteArticle(id) {
-    return fetch(`http://localhost:3333/article/${id}`, {
+    return fetch(`https://nodejs-for-web-prog.azurewebsites.net/article/${id}`, {
         method: 'DELETE',
 
 })

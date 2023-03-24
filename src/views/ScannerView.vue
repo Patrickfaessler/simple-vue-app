@@ -1,5 +1,5 @@
 <template>
-     <h1>-- BarcodeApp --</h1>
+     <h1>BarcodeApp</h1>
      <BarcodeScan></BarcodeScan>
 </template>
 

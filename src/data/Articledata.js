@@ -1,5 +1,5 @@
 function getArticle() {
-    return fetch('https://nodejs-for-web-prog.azurewebsites.net/article')
+    return fetch('http://localhost:3333/article')
     .then(response => response.json())
     .then(data => {
         return data;
@@ -10,10 +10,10 @@ function getArticle() {
 }
 
 function addArticle(newArticle) {
-    return fetch('https://nodejs-for-web-prog.azurewebsites.net/article', {
+    return fetch('http://localhost:3333/article', {
         method: 'POST',
     headers: {
-        'Content-Type': 'applications/json',
+        'Content-Type': 'application/json',
     },
     body: JSON.stringify(newArticle),
 })

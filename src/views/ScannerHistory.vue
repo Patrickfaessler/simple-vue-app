@@ -1,11 +1,12 @@
 <template>
-   <div v-for="article in articles" :key="article.id">
-    {{ article.name }}
+   <div v-for="article  in articles" :key="article.id">
+         <Article :barcodeString="article.name"></Article>
    </div>
 </template>
 
 <script>
 import { getArticle } from '../data/Articledata.js';
+import Article from '../components/Article.vue';
 
 export default {
     data() {
@@ -22,6 +23,9 @@ export default {
 
     created() {
         this.getArticles();
+    },
+    components: {
+        Article
     }
 }
 </script>

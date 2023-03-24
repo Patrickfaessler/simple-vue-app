@@ -18,7 +18,7 @@
 <script>
 import { StreamBarcodeReader } from "vue-barcode-reader";
 import Article from "./Article.vue";
-import { addArticle } from "../data/Articledata";
+import { addArticle } from "../data/Articledata.js";
 
 export default {
   components: {
@@ -47,7 +47,7 @@ export default {
       const newArticle = { name: this.decodedString };
       addArticle(newArticle) 
       .then(data => {
-        console.log("Artikel hinzugefügt: " + data);
+        console.log("Artikel hinzugefügt: " + newArticle.name);
       })
       .catch(error => {
         console.log(error);

@@ -1,21 +1,27 @@
 <template>
-    <h1>Test</h1>
+   <div v-for="article in articles" :key="article.id">
+    {{ article.name }}
+   </div>
 </template>
 
 <script>
-import { getArticle } from '../data/Articledata';
+import { getArticle } from '../data/Articledata.js';
 
 export default {
     data() {
         return {
-            article: [],
+            articles: [],
         }
     },
 
     methods: {
-        async getArticle() {
-            this.article = await getArticle();
+        async getArticles() {
+            this.articles = await getArticle();
         }
+    },
+
+    created() {
+        this.getArticles();
     }
 }
 </script>

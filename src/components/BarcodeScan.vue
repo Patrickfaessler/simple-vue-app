@@ -10,6 +10,7 @@
       <p class="barcode">Folgender Barcode wurde gelesen: {{ decodedString }}</p>
       <button @click="removeBarcode" class="remove-button">Barcode entfernen</button>
       <Article :barcodeString="decodedString"></Article>
+      <button @click="addArticle">Artikel Hinzufügen!</button>
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@
 <script>
 import { StreamBarcodeReader } from "vue-barcode-reader";
 import Article from "./Article.vue";
+import { addArticle } from "../data/Articledata";
 
 export default {
   components: {
@@ -41,6 +43,16 @@ export default {
       this.foundCode = false;
       this.decodedString = "";
     },
+    addArticle() {
+      const newArticle = { name: this.decodedString };
+      addArticle(newArticle) 
+      .then(data => {
+        console.log("Artikel hinzugefügt: " + data);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    }
   },
 };
 </script>

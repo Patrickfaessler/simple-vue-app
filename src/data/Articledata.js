@@ -1,5 +1,7 @@
+var  url = 'https://nodejs-for-web-prog.azurewebsites.net/article/'; //http://localost:3333/article/
+
 function getArticle() {
-    return fetch('https://nodejs-for-web-prog.azurewebsites.net/article')
+    return fetch(url)
     .then(response => response.json())
     .then(data => {
         return data;
@@ -10,7 +12,7 @@ function getArticle() {
 }
 
 function addArticle(newArticle) {
-    return fetch('https://nodejs-for-web-prog.azurewebsites.net/article', {
+    return fetch(url, {
         method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -27,7 +29,7 @@ function addArticle(newArticle) {
 }
 
 function deleteArticle(id) {
-    return fetch(`https://nodejs-for-web-prog.azurewebsites.net/article/${id}`, {
+    return fetch(url+id, {
         method: 'DELETE',
 
 })

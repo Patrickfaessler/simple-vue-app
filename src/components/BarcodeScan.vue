@@ -8,9 +8,8 @@
     </div>
     <div class="article" v-if="foundCode">
       <p class="barcode">Folgender Barcode wurde gelesen: {{ decodedString }}</p>
-      <button @click="removeBarcode" class="remove-button">Barcode entfernen</button>
-      <Article :barcodeString="decodedString"></Article>
-      <button @click="addArticle">Artikel Hinzufügen!</button>
+      <button @click="addArticle" class="add-button">Artikel Hinzufügen!</button>
+      <Article :barcodeString="decodedString" @articleAdded="loadArticles"></Article>
     </div>
   </div>
 </template>
@@ -39,10 +38,6 @@ export default {
       this.decodedString = string;
       this.foundCode = this.decodedString !== "";
     },
-    removeBarcode() {
-      this.foundCode = false;
-      this.decodedString = "";
-    },
     addArticle() {
       const newArticle = { name: this.decodedString };
       addArticle(newArticle) 
@@ -52,7 +47,9 @@ export default {
       .catch(error => {
         console.log(error);
       })
-    }
+      this.foundCode = false;
+      this.decodedString = "";
+    },
   },
 };
 </script>
@@ -94,8 +91,8 @@ export default {
   background-color: rgba(0, 255, 0, 0.8);
 }
 
-.remove-button {
-  background-color: #ff4b4b;
+.add-button {
+  background-color: #00b300;
   color: #fff;
   font-size: 16px;
   font-weight: bold;

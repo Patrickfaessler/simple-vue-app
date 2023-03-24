@@ -5,8 +5,9 @@
                 <img :src="article.image" alt="Bild" class="article-image" />
             </div>
             <div class="article-details">
-                {{ article.description }}
-                {{ article.price }}
+               <h1> {{ article.description }} 
+                {{ article.price }} </h1>
+               <h2>{{ article.ean }} </h2>
             </div>
         </div>
         <div class="article-details" v-if="!article">
@@ -17,7 +18,6 @@
 
 <script>
 import mockProducts from "@/assets/MockDatabase/MockProducts.js";
-
 export default {
     props: {
         barcodeString: {
@@ -29,11 +29,11 @@ export default {
         article() {
             return mockProducts.find((article) => article.ean === this.barcodeString);
         }
-    }
+    },
 }
 </script>
 
-<style>
+<style scoped>
 .article {
     display: flex;
     flex-direction: column;

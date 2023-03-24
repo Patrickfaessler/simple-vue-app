@@ -26,4 +26,18 @@ function addArticle(newArticle) {
 });
 }
 
-export { getArticle,addArticle };
+function deleteArticle(id) {
+    return fetch(`http://localhost:3333/article/${id}`, {
+        method: 'DELETE',
+
+})
+.then((response) => response.json())
+.then((data) => {
+    return data;
+})
+.catch((error) => {
+    console.log(error);
+});
+}
+
+export { getArticle,addArticle, deleteArticle };

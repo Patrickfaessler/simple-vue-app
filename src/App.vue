@@ -1,22 +1,24 @@
 <template>
-  <main>
-    <HomeView />
-  </main>
+  <header>
+    <NavBar />
+    <RouterView />
+  </header>
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue';
+import NavBar from "@/components/NavBar.vue";
 
 export default {
   components: {
-    HomeView
+    NavBar
   }
+
 }
 </script>
 
 <style>
-main {
-  width: 50%;
+header {
+  width: 100%;
   margin: 0 auto;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
